@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+const phone = '+17035550199';
+const phoneDisplay = '(703) 555-0199';
+---
+<Layout title="Contact Us | Woodsbridge Gutter Specialists" description="Contact Woodsbridge Gutter Specialists in Woodbridge, VA. Call (703) 555-0199 for same-day gutter cleaning, repair, or installation quotes.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> → Contact</div>
+      <h1>Contact Us</h1>
+      <p>Ready for clean, reliable gutters? Call or reach out — we respond promptly.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container content-block">
+      <h2>Phone</h2>
+      <p><a href={`tel:${phone}`} style="font-size:1.25rem;font-weight:700;color:var(--primary)">{phoneDisplay}</a></p>
+      <h2>Address</h2>
+      <p>930 Highams Ct<br />Woodbridge, VA 22191</p>
+      <h2>Business Hours</h2>
+      <ul>
+        <li>Monday – Friday: 7:00 AM – 6:00 PM</li>
+        <li>Saturday: 8:00 AM – 2:00 PM</li>
+        <li>Sunday: Closed (emergency calls returned next business day)</li>
+      </ul>
+      <h2>Service Area</h2>
+      <p>Woodbridge, Dale City, Lake Ridge, Occoquan, Lorton, Manassas, and greater Prince William County.</p>
+      <div style="margin-top:2rem;text-align:center"><a href={`tel:${phone}`} class="btn btn-primary">Call {phoneDisplay} Now</a></div>
+    </div>
+  </section>
+</Layout>

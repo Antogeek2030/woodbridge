@@ -1,0 +1,73 @@
+---
+const phone = '+17035550199';
+const phoneDisplay = '(703) 555-0199';
+const currentPath = Astro.url.pathname;
+---
+<header class="header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <span class="logo-icon">🏠</span>
+      <span class="logo-text">Woodsbridge Gutter<br /><small>Specialists · Woodbridge, VA</small></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-expanded="false">Our Services <span class="caret">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/services/gutter-cleaning/">Gutter Cleaning</a>
+          <a href="/services/gutter-repair/">Gutter Repair</a>
+          <a href="/services/gutter-installation/">Seamless Installation</a>
+          <a href="/services/gutter-guards/">Gutter Guards</a>
+          <a href="/services/emergency-gutter-repair/">Emergency Repair</a>
+          <a href="/services/downspout-services/">Downspout Services</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-expanded="false">Problems <span class="caret">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/problems/clogged-gutters/">Clogged Gutters</a>
+          <a href="/problems/leaking-gutters/">Leaking Gutters</a>
+          <a href="/problems/sagging-gutters/">Sagging Gutters</a>
+          <a href="/problems/overflowing-gutters/">Overflowing Gutters</a>
+          <a href="/problems/damaged-downspouts/">Damaged Downspouts</a>
+          <a href="/problems/ice-dams/">Ice Dams</a>
+        </div>
+      </div>
+
+      <a href="/service-areas/">Service Areas</a>
+      <a href="/about/">About Us</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
+    <a href={`tel:${phone}`} class="header-phone">
+      <span>📞</span>
+      <span class="phone-text">{phoneDisplay}</span>
+    </a>
+    <button class="mobile-toggle" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  btn?.addEventListener('click', () => nav?.classList.toggle('open'));
+
+  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const parent = toggle.closest('.dropdown');
+      const isOpen = parent?.classList.contains('open');
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+      if (!isOpen) parent?.classList.add('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!(e.target as Element).closest('.dropdown')) {
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    }
+  });
+</script>

@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+const phone = '+17035550199';
+const phoneDisplay = '(703) 555-0199';
+---
+<Layout title="Service Areas | Woodsbridge Gutter Specialists" description="Gutter cleaning, repair & installation service areas: Woodbridge, Dale City, Lake Ridge, Occoquan, Lorton, Manassas and Prince William County.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> → Service Areas</div>
+      <h1>Areas We Serve</h1>
+      <p>Based in Woodbridge, we provide same-day gutter cleaning, repair, and installation throughout Prince William County.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container content-block">
+      <h2>Primary Service Area</h2>
+      <p>We focus on Woodbridge and the surrounding communities where we can maintain fast response times:</p>
+      <ul>
+        <li>Woodbridge</li>
+        <li>Dale City</li>
+        <li>Lake Ridge</li>
+        <li>Occoquan</li>
+        <li>Lorton</li>
+        <li>Manassas</li>
+        <li>Manassas Park</li>
+        <li>Triangle</li>
+        <li>Dumfries</li>
+        <li>Quantico</li>
+      </ul>
+      <p>If you are just outside these areas, call us — we frequently accommodate nearby locations depending on schedule.</p>
+      <h2>Our Address</h2>
+      <p>930 Highams Ct, Woodbridge, VA 22191</p>
+      <div class="map-wrapper" style="height:380px;margin:1.5rem 0">
+        <iframe title="Service area map" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.2697%2C38.6382%2C-77.2297%2C38.6782&amp;layer=mapnik&amp;marker=38.6582%2C-77.2497" loading="lazy" style="width:100%;height:100%;border:0"></iframe>
+      </div>
+      <div style="text-align:center;margin-top:1.5rem">
+        <a href={`tel:${phone}`} class="btn btn-primary">Call {phoneDisplay} for Service</a>
+      </div>
+    </div>
+  </section>
+</Layout>

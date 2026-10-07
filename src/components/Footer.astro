@@ -1,0 +1,41 @@
+---
+const phone = '+17035550199';
+const phoneDisplay = '(703) 555-0199';
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Woodsbridge Gutter Specialists</h4>
+        <p>Professional gutter cleaning, repair, and seamless installation serving Woodbridge and Prince William County. Same-day service, upfront pricing, written guarantee.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <p><a href="/services/gutter-cleaning/">Gutter Cleaning</a></p>
+        <p><a href="/services/gutter-repair/">Gutter Repair</a></p>
+        <p><a href="/services/gutter-installation/">Installation</a></p>
+        <p><a href="/services/gutter-guards/">Gutter Guards</a></p>
+        <p><a href="/services/emergency-gutter-repair/">Emergency Repair</a></p>
+      </div>
+      <div>
+        <h4>Common Problems</h4>
+        <p><a href="/problems/clogged-gutters/">Clogged Gutters</a></p>
+        <p><a href="/problems/leaking-gutters/">Leaking Gutters</a></p>
+        <p><a href="/problems/sagging-gutters/">Sagging Gutters</a></p>
+        <p><a href="/problems/overflowing-gutters/">Overflowing</a></p>
+        <p><a href="/problems/ice-dams/">Ice Dams</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href={`tel:${phone}`}>{phoneDisplay}</a></p>
+        <p>930 Highams Ct<br />Woodbridge, VA 22191</p>
+        <p>Mon–Sat 7:00 AM – 6:00 PM</p>
+        <p style="margin-top:0.75rem"><a href="/service-areas/">Service Areas</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© {year} Woodsbridge Gutter Specialists. All rights reserved. | <a href="/privacy/">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+const phone = '+17035550199';
+const phoneDisplay = '(703) 555-0199';
+---
+<Layout title="About Us | Woodsbridge Gutter Specialists" description="Local licensed gutter specialists serving Woodbridge and Prince William County. Same-day service, upfront pricing, written workmanship guarantee.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> → About Us</div>
+      <h1>About Woodsbridge Gutter Specialists</h1>
+      <p>Local technicians focused on one thing: keeping Woodbridge and Prince William County homes dry and protected with reliable gutter systems.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container content-block">
+      <h2>Who We Are</h2>
+      <p>We are a licensed, insured gutter service team based in Woodbridge. Our focus is residential gutter cleaning, repair, seamless installation, and protection systems. We know the housing stock, the leaf loads from local trees, and the drainage challenges of Northern Virginia.</p>
+      <h2>How We Work</h2>
+      <ul>
+        <li><strong>Upfront pricing</strong> — Written estimate before any work begins. No surprise charges.</li>
+        <li><strong>Same-day priority</strong> — Most cleaning and repair calls are completed the day you call.</li>
+        <li><strong>Honest repair vs. replace advice</strong> — We will not push a new system when a solid repair will restore years of service.</li>
+        <li><strong>Clean job sites</strong> — We haul away debris and leave the property cleaner than we found it.</li>
+        <li><strong>Written workmanship guarantee</strong> — We stand behind every job.</li>
+      </ul>
+      <h2>Our Location</h2>
+      <p>930 Highams Ct, Woodbridge, VA 22191. We serve Woodbridge, Dale City, Lake Ridge, Occoquan, Lorton, Manassas, and surrounding communities.</p>
+      <div style="margin-top:2rem;text-align:center"><a href={`tel:${phone}`} class="btn btn-primary">Call {phoneDisplay}</a></div>
+    </div>
+  </section>
+</Layout>
